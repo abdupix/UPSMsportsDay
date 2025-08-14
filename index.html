@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UPSM Sports Day 2025 Results</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="UPSM Sports Day results table with automatic totals and sorting.">
+    <!-- favicon from logo.png -->
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <!-- Sahitya font for logo text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <h1>UPSM Sports Day 2025 Results</h1>
+            <p class="hint">The current total score of teams from today's sports day. Please confirm results with USB officials</p>
+            <p class="hint"><strong>Scoring for each sport:</strong><br>Finals winner: 4 points. <br>Finals runner-up: 2 points. <br>Finals 3rd position: 1 point.</p>
+
+        </header>
+        <div class="update-info" aria-live="polite">
+            <span id="last-updated">Last updated: —</span>
+        </div>
+        <div class="table-wrap">
+            <table id="results-table" aria-describedby="table-help">
+                <thead>
+                    <tr>
+                        <th scope="col">Team</th>
+                        <th scope="col">Netball</th>
+                        <th scope="col">Volleyball</th>
+                        <th scope="col">Futsal</th>
+                        <th scope="col">Rugby</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Update these score numbers in index.html; the page will total and sort on load -->
+                    <tr data-team="Grey">
+                        <th scope="row" class="team">MBBS1</th>
+                        <td class="score" data-label="Netball">0</td>
+                        <td class="score" data-label="Volleyball">0</td>
+                        <td class="score" data-label="Futsal">0</td>
+                        <td class="score" data-label="Rugby">0</td>
+                        <td class="total" data-label="Total" aria-label="Total for MBBS1">0</td>
+                    </tr>
+                    <tr data-team="Blue">
+                        <th scope="row" class="team">MBBS2</th>
+                        <td class="score" data-label="Netball">0</td>
+                        <td class="score" data-label="Volleyball">0</td>
+                        <td class="score" data-label="Futsal">0</td>
+                        <td class="score" data-label="Rugby">0</td>
+                        <td class="total" data-label="Total" aria-label="Total for MBBS2">0</td>
+                    </tr>
+                    <tr data-team="Pink">
+                        <th scope="row" class="team">MBBS3</th>
+                        <td class="score" data-label="Netball">0</td>
+                        <td class="score" data-label="Volleyball">0</td>
+                        <td class="score" data-label="Futsal">0</td>
+                        <td class="score" data-label="Rugby">0</td>
+                        <td class="total" data-label="Total" aria-label="Total for MBBS3">0</td>
+                    </tr>
+                    <tr data-team="Black">
+                        <th scope="row" class="team">MBBS5</th>
+                        <td class="score" data-label="Netball">0</td>
+                        <td class="score" data-label="Volleyball">0</td>
+                        <td class="score" data-label="Futsal">0</td>
+                        <td class="score" data-label="Rugby">0</td>
+                        <td class="total" data-label="Total" aria-label="Total for MBBS5">0</td>
+                    </tr>
+                    <tr data-team="Green">
+                        <th scope="row" class="team">PBHC</th>
+                        <td class="score" data-label="Netball">0</td>
+                        <td class="score" data-label="Volleyball">0</td>
+                        <td class="score" data-label="Futsal">0</td>
+                        <td class="score" data-label="Rugby">0</td>
+                        <td class="total" data-label="Total" aria-label="Total for PBH">0</td>
+                    </tr>
+                    <tr data-team="Red">
+                        <th scope="row" class="team">Nursing</th>
+                        <td class="score" data-label="Netball">0</td>
+                        <td class="score" data-label="Volleyball">0</td>
+                        <td class="score" data-label="Futsal">0</td>
+                        <td class="score" data-label="Rugby">0</td>
+                        <td class="total" data-label="Total" aria-label="Total for Nursing">0</td>
+                    </tr>
+                    <tr data-team="Maroon">
+                        <th scope="row" class="team">BMHS</th>
+                        <td class="score" data-label="Netball">0</td>
+                        <td class="score" data-label="Volleyball">0</td>
+                        <td class="score" data-label="Futsal">0</td>
+                        <td class="score" data-label="Rugby">0</td>
+                        <td class="total" data-label="Total" aria-label="Total for BMHS">0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p id="table-help" class="sr-only">Update scores in the HTML file. Totals update on page load and rows are sorted by total score (highest first).</p>
+        </div>
+        <br>
+        <section id="podium" class="podium" aria-label="Top 3 teams">
+            <h2 class="podium-title">The current podium standings</h2>
+            <div class="podium-grid">
+                <div class="podium-step second" data-pos="2" aria-label="2nd place"></div>
+                <div class="podium-step first" data-pos="1" aria-label="1st place"></div>
+                <div class="podium-step third" data-pos="3" aria-label="3rd place"></div>
+            </div>
+        </section>
+        <section class="logo">
+            <div class="text-container">
+                <div class="logo-img">
+                    <img src="logo.png" alt="UPSM Logo">
+                </div>
+                <p class="logo-text">Umanand Prasad School of Medicine & Health Science</p>
+            </div>
+
+        </section>
+        <footer class="site-footer" role="contentinfo">
+            <p>© <span id="copyright-year">2025</span> <a href="https://www.instagram.com/abdupix/" target="_blank" rel="noopener noreferrer">AbduPix</a></p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
